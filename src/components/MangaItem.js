@@ -1,11 +1,12 @@
-import './MangaItem.css'
-function MangaItem(){
-    return (
-        <div className="manga-item">
-        <img   src="/images/1.jpg" alt="" />
-        <h4>Book 1</h4>
-      </div>
-    );
+import "./MangaItem.css";
+function MangaItem(props) {
+  const { manga } = props;
+  return (
+    <div className="manga-item">
+      <img src={manga.link} />
+      <h4>{manga.title}</h4>
+    </div>
+  )
 }
 
-export default MangaItem
+export default MangaItem;

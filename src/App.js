@@ -1,18 +1,19 @@
 import "./App.css";
 import AppHeader from "./components/AppHeader";
 import MangaItem from "./components/MangaItem";
+import mangas from "./data/data";
+
+
 
 function App() {
-  const textInput = <input type="text" />;
-  const okButton = <button>eieieieie</button>;
+ const mangaElements = mangas.map((manga,index) =>{
+   return <MangaItem key={index} manga={manga}/>
+ })
   return (
     <div className="app">
-     <AppHeader />
+      <AppHeader />
       <div className="app-grid">
-       <MangaItem/>
-       <MangaItem/>
-       <MangaItem/>
-       <MangaItem/>       
+    {mangaElements}
       </div>
     </div>
   );

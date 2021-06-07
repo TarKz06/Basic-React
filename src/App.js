@@ -1,14 +1,19 @@
-import './App.css';
+import "./App.css";
+import AppHeader from "./components/AppHeader";
+import MangaItem from "./components/MangaItem";
 
 function App() {
-  const textInput = <input type="text"/>
+  const textInput = <input type="text" />;
+  const okButton = <button>eieieieie</button>;
   return (
-    <div className="App">
-      <h2>ความรัก</h2>
-      <p>eiei</p>
-      <p>
-        {textInput}
-      </p>
+    <div className="app">
+     <AppHeader />
+      <div className="app-grid">
+       <MangaItem/>
+       <MangaItem/>
+       <MangaItem/>
+       <MangaItem/>       
+      </div>
     </div>
   );
 }
